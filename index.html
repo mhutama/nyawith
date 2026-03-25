@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYAWIT - Wheel of Fortune</title>
+    <title>NYAWITH</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
@@ -111,8 +111,8 @@
 <body class="min-h-screen flex flex-col items-center justify-start p-4 pt-8 pb-12">
 
     <header class="text-center mb-8">
-        <h1 class="header-title text-4xl mb-1">NYAWIT</h1>
-        <p class="text-[10px] font-bold tracking-[0.4em] opacity-60 uppercase">NYari With InTeractive Tool</p>
+        <h1 class="header-title text-4xl mb-1">NYAWITH</h1>
+        <p class="text-[10px] font-bold tracking-[0.4em] opacity-60 uppercase">NYari With InTeractive HTML</p>
     </header>
 
     <div class="fixed top-6 right-6 z-50">
@@ -194,7 +194,7 @@
                             </thead>
                             <tbody id="historyBody" class="divide-y divide-white/5"></tbody>
                         </table>
-                        <div id="noHistory" class="p-8 text-center text-gray-500 italic text-[10px]">No spins yet</div>
+                        <div id="noHistory" class="p-8 text-center text-white-500 italic text-[10px]">No spins yet</div>
                     </div>
                 </div>
             </div>
@@ -268,7 +268,7 @@
             names.forEach((name, i) => {
                 const div = document.createElement('div');
                 div.className = 'flex items-center gap-2 bg-black/10 p-2 rounded-lg border border-white/5 group';
-                div.innerHTML = `<span class="text-[10px] font-bold text-gray-500 w-4">${i + 1}</span><input type="text" maxlength="25" data-idx="${i}" class="name-input bg-transparent border-none text-xs w-full outline-none focus:text-purple-400 transition-colors" placeholder="Name..." value="${name}">`;
+                div.innerHTML = `<span class="text-[10px] font-bold text-white-500 w-4">${i + 1}</span><input type="text" maxlength="25" data-idx="${i}" class="name-input bg-transparent border-none text-xs w-full outline-none focus:text-purple-400 transition-colors" placeholder="Name..." value="${name}">`;
                 namesContainer.appendChild(div);
             });
             document.querySelectorAll('.name-input').forEach(input => {
@@ -333,7 +333,7 @@
             historyBody.innerHTML = ''; noHistoryMsg.classList.toggle('hidden', history.length > 0);
             history.forEach(item => {
                 const tr = document.createElement('tr');
-                tr.innerHTML = `<td class="px-3 py-3 font-mono text-gray-500">#${item.round}</td><td class="px-3 py-3 font-bold text-purple-400 truncate max-w-[80px]">${item.name}</td><td class="px-3 py-3 text-gray-500 font-mono text-[9px]">${item.time}</td>`;
+                tr.innerHTML = `<td class="px-3 py-3 font-mono text-white-500">#${item.round}</td><td class="px-3 py-3 font-bold text-purple-400 truncate max-w-[80px]">${item.name}</td><td class="px-3 py-3 text-white-500 font-mono text-[9px]">${item.time}</td>`;
                 historyBody.appendChild(tr);
             });
         }
